@@ -1,0 +1,93 @@
+// Import any other Sass files or variables if needed
+
+
+// Define variables
+$blue-color: #007bff;
+
+// Apply styles
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.blue-header {
+    background-color: $blue-color;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.central-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.title-section {
+    margin: 40px auto;
+    width: 230px;
+}
+.card-section {
+    margin: 40px auto;
+    width: 230px;
+    height: 300px;
+}
+
+.blue-footer {
+    background-color: $blue-color;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+//spin loader 
+.loader {
+    border: 20px solid #ffffff;
+    border-top: 20px solid $blue-color; /* Use the same blue color as the header and footer */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto; /* Adjust margin as needed */
+    display: none; /* Initially hide the loader */
+    position: relative; /*To get spin loader in front*/
+    z-index: 999; /* Set a higher z-index value than the overlay*/
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Show the loader when needed using JavaScript */
+.loading .loader {
+    display: block;
+   
+}
+
+/* Overlay to hide page behind */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black overlay */
+    z-index: 990; /* Ensure the overlay is on top of everything */
+    display: none; /* Initially hide the overlay */
+}
