@@ -1,2 +1,4 @@
 # StartPage
-My start page
+
+Welcome toMy start page.
+My start page it is done from scratch 
